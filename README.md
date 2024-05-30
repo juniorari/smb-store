@@ -29,7 +29,7 @@ O projeto vai rodar na porta 8089: [http://localhost:8089](http://localhost:8089
 3. [Docker PHP APACHE](https://hub.docker.com/_/php)
 4. [Docker MySQL](https://hub.docker.com/r/mysql/mysql-server)
 5. [Composer](https://getcomposer.org/doc/)
-6. [VueJS](htts://vuejs.org/)
+6. [VueJS](https://vuejs.org/)
 7. [Materialize](https://materializecss.com/)
 8. [Bulma.IO para o modal](https://github.com/jgthms/bulma/)
 9. [Booststrap](https://getbootstrap.com/)
