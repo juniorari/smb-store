@@ -33,3 +33,4 @@ user_guide_src/cilexer/pycilexer.egg-info/*
 /apache_log/
 /node_modules/
 /db_data/
+/uploads/

@@ -24,13 +24,15 @@ DROP TABLE IF EXISTS `cadastro`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `cadastro` (
     `id` int NOT NULL AUTO_INCREMENT,
-    `nome` varchar(255) NOT NULL,
-    `fone` varchar(11) NOT NULL,
-    `email` varchar(255) NOT NULL,
-    `nascimento` date NOT NULL,
-    `imagem` varchar(255) NOT NULL,
+    `nome` varchar(150) NOT NULL,
+    `sobrenome` varchar(150) NOT NULL,
+    `sexo` varchar(1) NOT NULL,
+	`nascimento` date NOT NULL,
+	`email` varchar(255) NOT NULL,
+    `fone` varchar(20) NOT NULL,
+    `foto` varchar(255) NOT NULL,
     PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=48 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -41,6 +43,13 @@ LOCK TABLES `cadastro` WRITE;
 /*!40000 ALTER TABLE `cadastro` DISABLE KEYS */;
 /*!40000 ALTER TABLE `cadastro` ENABLE KEYS */;
 UNLOCK TABLES;
+
+INSERT INTO cadastro (id,nome,sobrenome,sexo,nascimento,email,fone,foto) VALUES
+  (1,'saskdjhg','kjashdklasd','F','1978-02-12','1a3s21d654','(36) 5423-4342','uploads/cbc1a63a48b703d4c2886bf75b976f30.jpg'),
+  (2,'ajshgd','65as4d64','M','2000-11-01','asdasd','(36) 5423-4474','uploads/48b70a09e687b18b4853d38d86403905.jpg'),
+  (3,'kjsdhflksdjfh','lkjahsd','M','2006-12-10','as4d56','(54) 6 5423-4234','uploads/646ad15795a32a7e32c85be72788dcb0.jpg'),
+  (4,'gkahsgjdhas','lkjhaskjdh','F','1987-10-10','6a5s4d65a','(16) 5 4454-6546','uploads/d6742d889ab3102a9b6001131cb2be00.jpg');
+
 
 --
 -- Dumping routines for database 'smbstore'
