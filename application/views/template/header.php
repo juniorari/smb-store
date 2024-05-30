@@ -19,25 +19,12 @@
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/v-mask/dist/v-mask.min.js"></script>
-<!--	<script src="https://cdn.jsdelivr.net/npm/vuejs-datepicker@1.6.2/dist/vuejs-datepicker.min.js"></script>-->
-<!--	<script src="https://unpkg.com/vuejs-datepicker"></script>-->
 
 
 	<script>
-
 		// As a plugin
 		Vue.use(VueMask.VueMaskPlugin);
 	</script>
 </head>
 <body class="bg-light">
-<!---->
-<!--<div id="apps">-->
-<!--</div>-->
-<!--<script>-->
-<!--	const app = new Vue({-->
-<!--		el: '#apps',-->
-<!--		components: {-->
-<!--			vuejsDatepicker-->
-<!--		}-->
-<!--	})-->
-<!--</script>-->
+
