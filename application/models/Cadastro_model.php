@@ -66,10 +66,15 @@ class Cadastro_model extends CI_Model
 
 	}
 
-	public function searchCadastro($match)
+	public function searchCadastro($valor, $campo)
 	{
-		$field = array('nome', 'sobrenome', 'sexo', 'nascimento', 'email', 'fone', 'foto');
-		$this->db->like('concat(' . implode(',', $field) . ')', $match);
+		if ($campo) {
+			$field = [];
+			$field[] = $campo;
+		} else {
+			$field = ['nome', 'sobrenome', 'sexo', 'nascimento', 'email', 'fone', 'foto'];
+		}
+		$this->db->like('concat(' . implode(',', $field) . ')', $valor);
 		$query = $this->db->get('cadastro');
 		if ($query->num_rows() > 0) {
 			return $query->result();

@@ -1,3 +1,3 @@
 <?php
-$lang['Search'] = 'Buscar';
+$lang['Search by name'] = 'Buscar por nome';
 $lang['Add'] = 'Adicionar';

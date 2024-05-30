@@ -31,7 +31,7 @@ var v = new Vue({
 		editarModal: false,
 		apagarModal: false,
 		users: [],
-		search: {text: ''},
+		search: {text: '', email: ''},
 		emptyResult: false,
 		novoCadastro: {
 			nome: '',
@@ -101,9 +101,10 @@ var v = new Vue({
 				}
 			})
 		},
-		searchCadastro() {
+		searchCadastro(campo) {
+			campo = campo || 'nome'
 			var formData = v.formData(v.search);
-			axios.post(this.url + "cadastro/searchCadastro", formData).then(function (response) {
+			axios.post(this.url + "cadastro/searchCadastro?campo="+campo, formData).then(function (response) {
 				if (response.data.cadastros == null) {
 					v.noResult()
 				} else {

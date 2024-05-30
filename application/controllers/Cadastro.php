@@ -211,8 +211,13 @@ class Cadastro extends CI_Controller {
 
     }
     function searchCadastro() {
-        $value = $this->input->post('text');
-        $query = $this->cadastro->searchCadastro($value);
+
+		$campo = $this->input->get('campo') ?? 'nome';
+		$value = $this->input->post('text');
+		if ($campo == 'email') {
+			$value = $this->input->post('email');
+		}
+        $query = $this->cadastro->searchCadastro($value, $campo);
         if ($query) {
             $result['cadastros'] = $query;
         }

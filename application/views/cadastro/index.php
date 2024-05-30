@@ -26,10 +26,15 @@ $this->lang->load('custom_lang', 'portuguese-brazilian');
 						<button class="btn btn-default btn-block"
 								@click="adicionarModal= true; idade = ''"><?php print lang('Add') ?></button>
 					</div>
-					<div class="col-md-4">
+					<div class="col-md-3">
 						<br>
-						<input placeholder="<?php print lang('Search') ?>" type="search" class="form-control"
-							   v-model="search.text" @keyup="searchCadastro" name="search">
+						<input placeholder="<?php print lang('Search by name') ?>" type="search" class="form-control"
+							   v-model="search.text" @keyup="searchCadastro('nome')" name="search">
+					</div>
+					<div class="col-md-3">
+						<br>
+						<input placeholder="Buscar por email" type="search" class="form-control"
+							   v-model="search.email" @keyup="searchCadastro('email')" name="search">
 					</div>
 				</div>
 				<table class="table is-bordered is-hoverable">
